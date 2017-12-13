@@ -1,0 +1,44 @@
+<html>
+	<body>
+		<script type="text/javascript" src="/jquery/jquery.js"></script>
+		<script type="text/javascript" src="/jquery/ajaxfileupload.js"></script>
+		<script type="text/javascript">
+		    function uploadFile(){
+					document.getElementById("loadlabel").hidden=false;
+		      var formData = new FormData();
+					formData.append('file', $('#file')[0].files[0]);
+					$.ajax({
+		    		url: '/API/upload_image_demo.php',
+		    		type: 'POST',
+		    		cache: false,
+		    		data: formData,
+		    		processData: false,
+		    		contentType: false}).done(function(res) {
+							var result = JSON.parse(res);
+							if(result.code != 0){
+							alert(result.msg);
+						} else {
+							document.getElementById("originalImg").src=result.original_path;
+							document.getElementById("originalImg").hidden=false;
+							document.getElementById("resultImg").src=result.result_path;
+							document.getElementById("resultImg").hidden=false;
+							document.getElementById("loadlabel").hidden=true;
+							}
+						}).fail(function(res) {
+							alert("error:",res);
+							document.getElementById("loadlabel").hidden=true;
+						});
+		    }
+		</script>
+		<div id="uploadForm">
+		    <input id="file" style="width:330px" type="file"/><button id="upload" onclick="uploadFile()" type="button" style="padding:5px 10px;background:#25CCA5;color:#fff;border-radius: 7px;
+		">upload</button>
+			<p id="loadlabel" hidden>Loading......</p>
+			<img id="originalImg" src="" style="width:300px" hidden=true  alt="originalImg" />
+			<div></div>
+			<div></div>
+			<div></div>
+			<img id="resultImg" src="" style="width:300px" hidden=true  alt="resultImg" />
+		</div>
+	</body>
+</html>
