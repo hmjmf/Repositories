@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="client" targetName="server" />
+      <config projectName="client" targetName="client" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e1668129-ca54-4b22-9dfa-2955a9ef9576" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client_main.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client_main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server_main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server_main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1352">
+              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding>
+                <element signature="e#41#60#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logging.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/include/glog/logging.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="13130">
+              <caret line="505" column="33" lean-forward="false" selection-start-line="505" selection-start-column="33" selection-end-line="505" selection-end-column="33" />
+              <folding>
+                <marker date="1511759754000" expanded="false" signature="2392:2538" ph="..." />
+                <marker date="1511759754000" expanded="false" signature="11537:12575" ph="..." />
+                <marker date="1511759754000" expanded="false" signature="14027:14153" ph="..." />
+                <marker date="1511759754000" expanded="false" signature="51947:51968" ph="&lt;T&gt;" />
+                <marker date="1511759754000" expanded="true" signature="52038:52149" ph="{...}" />
+                <marker date="1511759754000" expanded="false" signature="52158:52383" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socket.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/sys/socket.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16354">
+              <caret line="683" column="4" lean-forward="false" selection-start-line="683" selection-start-column="4" selection-end-line="683" selection-end-column="4" />
+              <folding>
+                <marker date="1510279699000" expanded="false" signature="5939:6002" ph="..." />
+                <marker date="1510279699000" expanded="false" signature="6009:6244" ph="..." />
+                <marker date="1510279699000" expanded="false" signature="6983:7919" ph="..." />
+                <marker date="1510279699000" expanded="false" signature="14021:14091" ph="..." />
+                <marker date="1510279699000" expanded="true" signature="14046:14090" ph="{...}" />
+                <marker date="1510279699000" expanded="true" signature="14177:14247" ph="/.../" />
+                <marker date="1510279699000" expanded="false" signature="14177:14407" ph="..." />
+                <marker date="1510279699000" expanded="true" signature="14272:14318" ph="{...}" />
+                <marker date="1510279699000" expanded="false" signature="21878:22286" ph="..." />
+                <marker date="1510279699000" expanded="true" signature="22975:23127" ph="/.../" />
+                <marker date="1510279699000" expanded="false" signature="22975:23775" ph="..." />
+                <marker date="1510279699000" expanded="true" signature="23152:23442" ph="/.../" />
+                <marker date="1510279699000" expanded="true" signature="23459:23774" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="in.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/netinet/in.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7826">
+              <caret line="301" column="8" lean-forward="false" selection-start-line="301" selection-start-column="8" selection-end-line="301" selection-end-column="8" />
+              <folding>
+                <marker date="1510279642000" expanded="false" signature="14948:15546" ph="..." />
+                <marker date="1510279642000" expanded="false" signature="17913:17985" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_in_addr_t.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/sys/_types/_in_addr_t.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_in_port_t.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/sys/_types/_in_port_t.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/client_main.cpp" />
+        <option value="$PROJECT_DIR$/server_main.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="2560" />
+    <option name="height" value="1348" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Less</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="client" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="echo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.client">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+    <configuration name="client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="client" TARGET_NAME="client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="client" RUN_TARGET_NAME="client">
+      <envs />
+    </configuration>
+    <configuration name="server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="client" TARGET_NAME="server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="client" RUN_TARGET_NAME="server">
+      <envs />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.client" />
+      <item index="2" class="java.lang.String" itemvalue="Application.server" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e1668129-ca54-4b22-9dfa-2955a9ef9576" name="Default" comment="" />
+      <created>1513410198844</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1513410198844</updated>
+      <workItem from="1513410200197" duration="6107000" />
+      <workItem from="1513417067458" duration="49000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6156000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="2560" height="1344" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25178713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32746196" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33066455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39951962" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client_main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/glog/logging.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13130">
+          <caret line="505" column="33" lean-forward="false" selection-start-line="505" selection-start-column="33" selection-end-line="505" selection-end-column="33" />
+          <folding>
+            <marker date="1511759754000" expanded="false" signature="2392:2538" ph="..." />
+            <marker date="1511759754000" expanded="false" signature="11537:12575" ph="..." />
+            <marker date="1511759754000" expanded="false" signature="14027:14153" ph="..." />
+            <marker date="1511759754000" expanded="false" signature="51947:51968" ph="&lt;T&gt;" />
+            <marker date="1511759754000" expanded="true" signature="52038:52149" ph="{...}" />
+            <marker date="1511759754000" expanded="false" signature="52158:52383" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/sys/socket.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16354">
+          <caret line="683" column="4" lean-forward="false" selection-start-line="683" selection-start-column="4" selection-end-line="683" selection-end-column="4" />
+          <folding>
+            <marker date="1510279699000" expanded="false" signature="5939:6002" ph="..." />
+            <marker date="1510279699000" expanded="false" signature="6009:6244" ph="..." />
+            <marker date="1510279699000" expanded="false" signature="6983:7919" ph="..." />
+            <marker date="1510279699000" expanded="false" signature="14021:14091" ph="..." />
+            <marker date="1510279699000" expanded="true" signature="14046:14090" ph="{...}" />
+            <marker date="1510279699000" expanded="true" signature="14177:14247" ph="/.../" />
+            <marker date="1510279699000" expanded="false" signature="14177:14407" ph="..." />
+            <marker date="1510279699000" expanded="true" signature="14272:14318" ph="{...}" />
+            <marker date="1510279699000" expanded="false" signature="21878:22286" ph="..." />
+            <marker date="1510279699000" expanded="true" signature="22975:23127" ph="/.../" />
+            <marker date="1510279699000" expanded="false" signature="22975:23775" ph="..." />
+            <marker date="1510279699000" expanded="true" signature="23152:23442" ph="/.../" />
+            <marker date="1510279699000" expanded="true" signature="23459:23774" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/netinet/in.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7826">
+          <caret line="301" column="8" lean-forward="false" selection-start-line="301" selection-start-column="8" selection-end-line="301" selection-end-column="8" />
+          <folding>
+            <marker date="1510279642000" expanded="false" signature="14948:15546" ph="..." />
+            <marker date="1510279642000" expanded="false" signature="17913:17985" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/sys/_types/_in_addr_t.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/sys/_types/_in_port_t.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/sys/_types/_in_port_t.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/netinet/in.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7826">
+          <caret line="301" column="8" lean-forward="false" selection-start-line="301" selection-start-column="8" selection-end-line="301" selection-end-column="8" />
+          <folding>
+            <marker date="1510279642000" expanded="false" signature="14948:15546" ph="..." />
+            <marker date="1510279642000" expanded="false" signature="17913:17985" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/sys/_types/_in_addr_t.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/sys/socket.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16354">
+          <caret line="683" column="4" lean-forward="false" selection-start-line="683" selection-start-column="4" selection-end-line="683" selection-end-column="4" />
+          <folding>
+            <marker date="1510279699000" expanded="false" signature="5939:6002" ph="..." />
+            <marker date="1510279699000" expanded="false" signature="6009:6244" ph="..." />
+            <marker date="1510279699000" expanded="false" signature="6983:7919" ph="..." />
+            <marker date="1510279699000" expanded="false" signature="14021:14091" ph="..." />
+            <marker date="1510279699000" expanded="true" signature="14046:14090" ph="{...}" />
+            <marker date="1510279699000" expanded="true" signature="14177:14247" ph="/.../" />
+            <marker date="1510279699000" expanded="false" signature="14177:14407" ph="..." />
+            <marker date="1510279699000" expanded="true" signature="14272:14318" ph="{...}" />
+            <marker date="1510279699000" expanded="false" signature="21878:22286" ph="..." />
+            <marker date="1510279699000" expanded="true" signature="22975:23127" ph="/.../" />
+            <marker date="1510279699000" expanded="false" signature="22975:23775" ph="..." />
+            <marker date="1510279699000" expanded="true" signature="23152:23442" ph="/.../" />
+            <marker date="1510279699000" expanded="true" signature="23459:23774" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/glog/logging.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13130">
+          <caret line="505" column="33" lean-forward="false" selection-start-line="505" selection-start-column="33" selection-end-line="505" selection-end-column="33" />
+          <folding>
+            <marker date="1511759754000" expanded="false" signature="2392:2538" ph="..." />
+            <marker date="1511759754000" expanded="false" signature="11537:12575" ph="..." />
+            <marker date="1511759754000" expanded="false" signature="14027:14153" ph="..." />
+            <marker date="1511759754000" expanded="false" signature="51947:51968" ph="&lt;T&gt;" />
+            <marker date="1511759754000" expanded="true" signature="52038:52149" ph="{...}" />
+            <marker date="1511759754000" expanded="false" signature="52158:52383" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server_main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1352">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="e#41#60#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client_main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
