@@ -8,28 +8,43 @@
 #include <netinet/in.h>
 #include <glog/logging.h>
 #include <libnet.h>
+#include "help.hpp"
+
+
 
 void echo_back(int connect_socket){
-    char recv_buf[1024];
+    struct packet recv_packet;
+
     while (1){
-        memset(&recv_buf, 0, sizeof(recv_buf));
-        int rec = read(connect_socket, &recv_buf, sizeof(recv_buf));
+        memset(&recv_packet, 0, sizeof(recv_packet));
 
-        CHECK_NE(rec, -1) << "read";
-        if(rec == 0){
-            //client close
-            LOG(INFO) << "close";
+        //读包头（len）
+        int rec = readn(connect_socket, &recv_packet.len, sizeof(recv_packet.len));
 
+        CHECK_NE(rec, -1) << "read head fail";
+        if(rec < sizeof(recv_packet.len)){
+            LOG(INFO) << "client close when read head";
             break;
+        } else {
+            //读数据
+            int n = ntohl(recv_packet.len);
+
+            rec = readn(connect_socket, recv_packet.buf, n);
+            CHECK_NE(rec, -1) << "read data fail";
+            if(rec < n){
+                LOG(INFO) << "client close when read data";
+                break;
+            } else {
+                LOG(INFO) << "send:" << recv_packet.buf;
+                writen(connect_socket, &recv_packet, sizeof(recv_packet.len) + n);
+            }
         }
-        std::cout << recv_buf << std::endl;
-        write(connect_socket, &recv_buf, strlen(recv_buf));
     }
 }
 int main(int argc,char* argv[]) {
     FLAGS_alsologtostderr = 1;
     google::InitGoogleLogging(argv[0]);
-    google::SetLogDestination(google::GLOG_INFO, "./log");
+    google::SetLogDestination(google::GLOG_INFO, "./log_server");
 
 
     int listen_socket = socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);
@@ -55,7 +70,7 @@ int main(int argc,char* argv[]) {
         int connect_socket = accept(listen_socket,(struct sockaddr *)&client_addr, &client_addr_len);
         CHECK_GT(connect_socket, 0) << "accept";
 
-        std::cout <<  "client->ip:" << inet_ntoa(client_addr.sin_addr) << ", port:" << ntohs(client_addr.sin_port) << std::endl;
+        LOG(INFO) <<  "client->ip:" << inet_ntoa(client_addr.sin_addr) << ", port:" << ntohs(client_addr.sin_port) ;
 
         pid_t pid = fork();
         CHECK_NE(pid, -1) << "fork";

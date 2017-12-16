@@ -8,8 +8,15 @@
 #include <netinet/in.h>
 #include <glog/logging.h>
 #include <libnet.h>
+#include "help.hpp"
 
-int main() {
+int main(int argc,char* argv[]) {
+    FLAGS_alsologtostderr = 1;
+    google::InitGoogleLogging(argv[0]);
+    google::SetLogDestination(google::GLOG_INFO, "./log_client");
+
+
+
     int client_socket = socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);
     CHECK_GT( client_socket, 0) << "socket";
     struct sockaddr_in server_addr;
@@ -20,15 +27,34 @@ int main() {
 
     CHECK_EQ(connect(client_socket, (struct sockaddr*)&server_addr, sizeof(server_addr)),0) << "connect";
 
+    struct packet send_packet;
+    struct packet recv_packet;
+    memset(&send_packet, 0, sizeof(send_packet));
+    memset(&recv_packet, 0, sizeof(recv_packet));
 
-    char send_buf[1024] = {0};
-    char recv_buf[1024] = {0};
-    while(std::cin >> send_buf){
-        write(client_socket, send_buf, strlen(send_buf));
+    while(std::cin >> send_packet.buf){
+        int n = strlen(send_packet.buf);
+        send_packet.len = htonl(n);
+        writen(client_socket, &send_packet, sizeof(send_packet.len) + n);
 
-        memset(recv_buf, 0, sizeof(recv_buf));
-        read(client_socket, recv_buf, sizeof(recv_buf));
-        std::cout << recv_buf << std::endl;
+        memset(&recv_packet, 0, sizeof(recv_packet));
+        int rec = readn(client_socket, &recv_packet.len, sizeof(recv_packet.len));
+        CHECK_NE(rec, -1) << "read head fail";
+        if(rec < sizeof(recv_packet.len)){
+            LOG(INFO) << "server close when read head";
+            break;
+        } else {
+            //读数据
+            int n = ntohl(recv_packet.len);
+            rec = readn(client_socket, &recv_packet.buf, n);
+            CHECK_NE(rec, -1) << "read data fail";
+            if(rec < n){
+                LOG(INFO) << "server close when read data";
+                break;
+            } else {
+                LOG(INFO) << "receive:" << recv_packet.buf;
+            }
+        }
     }
 
 
