@@ -8,6 +8,7 @@
 #include <netinet/in.h>
 #include <glog/logging.h>
 #include <libnet.h>
+
 #include "help.hpp"
 
 int main(int argc,char* argv[]) {
@@ -32,34 +33,57 @@ int main(int argc,char* argv[]) {
     memset(&send_packet, 0, sizeof(send_packet));
     memset(&recv_packet, 0, sizeof(recv_packet));
 
-    while(std::cin >> send_packet.buf){
-        int n = strlen(send_packet.buf);
-        send_packet.len = htonl(n);
-        writen(client_socket, &send_packet, sizeof(send_packet.len) + n);
+    fd_set rset;
+    FD_ZERO(&rset);
 
-        memset(&recv_packet, 0, sizeof(recv_packet));
-        int rec = readn(client_socket, &recv_packet.len, sizeof(recv_packet.len));
-        CHECK_NE(rec, -1) << "read head fail";
-        if(rec < sizeof(recv_packet.len)){
-            LOG(INFO) << "server close when read head";
-            break;
-        } else {
-            //读数据
-            int n = ntohl(recv_packet.len);
-            rec = readn(client_socket, &recv_packet.buf, n);
-            CHECK_NE(rec, -1) << "read data fail";
-            if(rec < n){
-                LOG(INFO) << "server close when read data";
+    int maxfd;
+    int fd_stdin = fileno(stdin);
+    maxfd = (fd_stdin > client_socket ? fd_stdin : client_socket) + 1;
+
+    while(1){
+        FD_SET(fd_stdin, &rset);
+        FD_SET(client_socket, &rset);
+        int nready = select(maxfd, &rset, NULL, NULL, NULL);
+
+        CHECK_NE(nready, -1) << "select";
+
+        if(nready == 0){
+            continue;
+        } else if(FD_ISSET(client_socket, &rset)){
+            //接收
+            memset(&recv_packet, 0, sizeof(recv_packet));
+            int rec = readn(client_socket, &recv_packet.len, sizeof(recv_packet.len));
+            CHECK_NE(rec, -1) << "read head fail";
+            if(rec < sizeof(recv_packet.len)){
+                LOG(INFO) << "server close when read head";
                 break;
             } else {
-                LOG(INFO) << "receive:" << recv_packet.buf;
+                //读数据
+                int n = ntohl(recv_packet.len);
+                rec = readn(client_socket, &recv_packet.buf, n);
+                CHECK_NE(rec, -1) << "read data fail";
+                if(rec < n){
+                    LOG(INFO) << "server close when read data";
+                    break;
+                } else {
+                    LOG(INFO) << "receive:" << recv_packet.buf;
+                }
             }
+        } else if(FD_ISSET(fd_stdin, &rset)){
+            //发送
+            memset(&send_packet, 0, sizeof(send_packet));
+            std::cin >> send_packet.buf;
+            int n = strlen(send_packet.buf);
+            send_packet.len = htonl(n);
+            writen(client_socket, &send_packet, sizeof(send_packet.len) + n);
+        } else {
+            //error
+            close(client_socket);
+            LOG(FATAL) << "UN KNOW fileno";
+            break;
         }
     }
 
-
-
-
-
+    close(client_socket);
     return 0;
 }
