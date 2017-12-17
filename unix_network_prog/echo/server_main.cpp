@@ -15,6 +15,12 @@
 void echo_back(int connect_socket){
     struct packet recv_packet;
 
+    struct sockaddr_in localaddr;
+    socklen_t localaddr_len = sizeof(localaddr);
+    CHECK_GE(getpeername(connect_socket, (struct sockaddr*)&localaddr, &localaddr_len), 0) << "sockname";
+    char* ip = inet_ntoa(localaddr.sin_addr);
+    int port = ntohs(localaddr.sin_port);
+
     while (1){
         memset(&recv_packet, 0, sizeof(recv_packet));
 
@@ -23,7 +29,7 @@ void echo_back(int connect_socket){
 
         CHECK_NE(rec, -1) << "read head fail";
         if(rec < sizeof(recv_packet.len)){
-            LOG(INFO) << "client close when read head";
+            LOG(INFO) << "client close when read head,ip:" << ip << ",port:" << port;
             break;
         } else {
             //读数据
@@ -32,7 +38,7 @@ void echo_back(int connect_socket){
             rec = readn(connect_socket, recv_packet.buf, n);
             CHECK_NE(rec, -1) << "read data fail";
             if(rec < n){
-                LOG(INFO) << "client close when read data";
+                LOG(INFO) << "client close when read data,ip:" << ip << ",port:" << port;
                 break;
             } else {
                 LOG(INFO) << "send:" << recv_packet.buf;
