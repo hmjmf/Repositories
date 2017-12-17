@@ -9,6 +9,7 @@
 #include <glog/logging.h>
 #include <libnet.h>
 #include "help.hpp"
+#include <signal.h>
 
 
 
@@ -47,11 +48,15 @@ void echo_back(int connect_socket){
         }
     }
 }
+void handle_sigchld(int sig){
+    while(waitpid(-1, NULL, WNOHANG) > 0);
+}
 int main(int argc,char* argv[]) {
     FLAGS_alsologtostderr = 1;
     google::InitGoogleLogging(argv[0]);
     google::SetLogDestination(google::GLOG_INFO, "./log_server");
 
+    signal(SIGCHLD, handle_sigchld);
 
     int listen_socket = socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);
     CHECK_GT(listen_socket, 0) << "socket";
