@@ -72,10 +72,14 @@ int main(int argc,char* argv[]) {
         } else if(FD_ISSET(fd_stdin, &rset)){
             //发送
             memset(&send_packet, 0, sizeof(send_packet));
-            std::cin >> send_packet.buf;
-            int n = strlen(send_packet.buf);
-            send_packet.len = htonl(n);
-            writen(client_socket, &send_packet, sizeof(send_packet.len) + n);
+            if((std::cin >> send_packet.buf)){
+                int n = strlen(send_packet.buf);
+                send_packet.len = htonl(n);
+                writen(client_socket, &send_packet, sizeof(send_packet.len) + n);
+            } else {
+                LOG(INFO) << "shutdown";
+                shutdown(client_socket, SHUT_WR);
+            }
         } else {
             //error
             close(client_socket);
