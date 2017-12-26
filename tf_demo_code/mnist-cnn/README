@@ -1,0 +1,2 @@
+step499:train_loss:0.13624677062034607.train_acc:96.0,test_acc:97.2
+run python run.py
